@@ -1,104 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<link rel="stylesheet" href="style.css">
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="style.css">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined" rel="stylesheet">
 	<title>Document</title>
 </head>
 <body>
-	<header id="header">
-		<img src="placeholder.jpg" width="50px">
-		<ul class="menu">
-			<li><a href="#">Home</a></li>
-			<li>
-				<a href="#">Store</a>
-				<ul class="submenu menu">
-					<li><a href="#">Shoes</a></li>
-					<li><a href="#">T-shirt</a></li>
-					<li><a href="#">Shorts</a></li>
-				</ul>
-			</li>
-			<li><a href="#">Contact us</a></li>
-		</ul>
-		<button>search</button>
-	</header>
-	<div id="new-post">
+
+	<!-- <input type="radio" id="p1" name="page-selector" value="page1"/>
+	<label for="p1">PAGE 1</label> <br>
+	<input type="radio" id="p2" name="page-selector" value="page2"/>
+	<label for="p2">PAGE 2</label>
+
+	<div>- - - - - - - - - -</div>
+	<p id="page1">THIS IS PAGE 1</p>
+	<p id="page2">YAY PAGE 2</p> -->
+	
+	<nav id="navigation-bar">
 		<ul>
 			<li>
-				<div class="post">
-					<img src="placeholder.jpg" class="thumbnail">
-					<div class="infos">
-						<h2 class="name">Lorem ipsum dolor, sit amet consectetur.</h2>
-						<div>
-							<p class="writer">tuank</p>
-							<p class="date">23/12/2022</p>
-						</div>
-						<p class="desc">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorum, soluta molestiae a similique modi magnam enim iure nulla aut sunt facere veritatis, ipsam dolor ducimus et dolore officia minima earum!</p>
-
-					</div>
-				</div>
+				<input type="radio" name="page" id="page-home" value="page-home" checked>
+				<label for="page-home">
+					<label for="page-home" class="icon">
+						<span class="material-icons-outlined">home</span>
+						<span class="material-icons">home</span>
+					</label>
+					<label for="page-home">Home</label>
+				</label>
 			</li>
 			<li>
-				<div class="post">
-					<img src="placeholder.jpg" class="thumbnail">
-					<div class="infos">
-						<h2 class="name">Lorem ipsum dolor, sit amet consectetur.</h2>
-						<div>
-							<p class="writer">tuank</p>
-							<p class="date">23/12/2022</p>
-						</div>
-						<p class="desc">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorum, soluta molestiae a similique modi magnam enim iure nulla aut sunt facere veritatis, ipsam dolor ducimus et dolore officia minima earum!</p>
-					</div>
-				</div>
+				<input type="radio" name="page" id="page-shop" value="page-shop">
+				<label for="page-shop">
+					<label for="page-shop" class="icon">
+						<span class="material-icons-outlined">local_grocery_store</span>
+						<span class="material-icons">local_grocery_store</span>
+					</label>
+					<label for="page-shop">Shop</label>
+				</label>
 			</li>
 			<li>
-				<div class="post">
-					<img src="placeholder.jpg" class="thumbnail">
-					<div class="infos">
-						<h2 class="name">Lorem ipsum dolor, sit amet consectetur.</h2>
-						<div>
-							<p class="writer">tuank</p>
-							<p class="date">23/12/2022</p>
-						</div>
-						<p class="desc">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorum, soluta molestiae a similique modi magnam enim iure nulla aut sunt facere veritatis, ipsam dolor ducimus et dolore officia minima earum!</p>
-					</div>
-				</div>
+				<input type="radio" name="page" id="page-contact" value="page-contact">
+				<label for="page-contact">
+					<label for="page-contact" class="icon">
+						<span class="material-icons-outlined">help_outline</span>
+						<span class="material-icons">help</span>
+					</label>
+					<label for="page-contact">Contact</label>
+				</label>
 			</li>
 		</ul>
-	</div>
-	<footer id="footer">
-		<div id='ft-info'>
-			<h3>Giới thiệu</h3>
-			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam ducimus rem repellendus sit suscipit dolor repellat praesentium, tenetur nulla cum obcaecati maiores nesciunt aspernatur totam itaque tempore aliquid veniam sint?</p>
-			<br>
-			<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illo, suscipit expedita! Est nam quidem quia, laboriosam id cumque repudiandae culpa, vero exercitationem ratione ab sapiente. Laboriosam molestias quidem eligendi voluptas.</p>
-		</div>
-		<div id='ft-categories'>
-			<h3>Chuyên mục</h3>
-			<ul class="ft-row">
-				<li><a href="#">Featured</a></li>
-				<li><a href="#">Giáo dục</a></li>
-				<li><a href="#">Làm đẹp</a></li>
-				<li><a href="#">Sức khỏe</a></li>
-			</ul>
-			<ul class="ft-row">
-				<li><a href="#">Giải trí</a></li>
-				<li><a href="#">Kinh nghiệm hay</a></li>
-				<li><a href="#">Phong cách sống</a></li>
-				<li><a href="#">Tâm sự</a></li>
-			</ul>
-			<div>
-				<input type="text" placeholder="Nhập địa chỉ email">
-				<button>Sign up</button>
-			</div>
-		</div>
-		<div id="ft-map">
-			<h3>Bản đồ</h3>
-			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6530218.349020775!2d-128.03388853071124!3d36.94812655533962!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808fb9fe5f285e3d%3A0x8b5109a227086f55!2sCalifornia!5e0!3m2!1sen!2sus!4v1671797247249!5m2!1sen!2sus" width="400" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-		</div>
-	</footer>
-
+	</nav>
 </body>
 </html>

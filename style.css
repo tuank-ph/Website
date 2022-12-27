@@ -1,134 +1,112 @@
 @import url('https://fonts.cdnfonts.com/css/google-sans');
 
-* {
-    padding: 0;
-    margin:0;
-    font-family: 'Google Sans';
+/* body {
+    padding: 100px;
 }
 
-#header {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    height: 40px;
+#page1, #page2{
+    display: none;
+}
+
+body:has(#p1:checked) #page1 {
+    display: block;
+}
+body:has(#p2:checked) #page2 {
+    display: block;
+} */
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Google sans";
+}
+/* BEGIN OF NAVIGATION BAR */
+nav {
+    background-color: #f3f6fc;
     display: flex;
-    justify-content: space-between;
-    text-align: center;
+    height: 10vh;
+    min-height: 60px;
+    align-items: center;
+    justify-content: center;
+}
+
+nav > ul {
+    list-style-type: none;
+    display: inline-grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 70px;
+    gap: 3vw;
+}
+
+nav > ul > li * {
+    cursor: pointer;
+}
+
+/* Hide the radio button on Navigation bar */
+nav > ul > li > input { display: none; }
+
+nav > ul > li > label {
+    display: flex;
+    flex-direction: column;
     align-items: center;
 }
 
-#header, #footer{
-    background-color: #ebf3e7;
+nav label:not([class*=icons]) {
+    font-size: calc(10px + 0.9vh);
 }
 
-ul > li > a {
-    text-decoration: none;
+nav * {
+    color: #444746;
 }
 
-#header > ul > li {
-    display: inline-table;
-    margin: 0 5px;
+nav input:hover + label *,
+input:checked + label * {
+    color: #1f1f1f;
 }
 
-.menu > li > a {
-    padding: 4px 0px;
-    margin: 0 12px;
-    border-radius: 50vh;
-    color: #424940;
-    letter-spacing: 0.5px;
-    transition-property: padding, margin;
-    transition-duration: 0.2s;
-    transition-timing-function: ease-out;
-}
-
-.menu > li > a:hover {
-    padding: 4px 12px;
-    margin: 0 0;
-    background-color: #d5e8cf;
-    color: #111f0f;
+input:checked + label > label{
     font-weight: bold;
-    letter-spacing: 0;
 }
 
-.submenu {
+    /* icon */
+nav .icon {
+    display: flex;
+    align-content: center;
+    padding: 0 0;
+    border-radius: 50vh;
+}
+nav .icon span {
+    padding: 2px 0;
+}
+
+nav input:hover + label .icon {
+    padding: 0px 16px;
+    background-color: #e6e9ee;
+}
+
+nav input:checked + label > .icon,
+nav input:checked:hover + label > .icon {
+    transition: padding 250ms ease-out;
+    padding: 0 0;
+}
+
+nav input:checked + label span,
+nav input:checked:hover + label span {
+    transition: padding 250ms ease-out;
+    padding: 2px 16px;
+    border-radius: 50vh;
+}
+
+nav input:checked:hover + label span { background-color: #b8daf0; }
+nav input:checked + label span { background-color: #c2e7ff; }
+
+nav input:not(:checked) + label span[class$=icons],
+nav input:checked + label span[class$='outlined']  {
     position: absolute;
-    background-color: #ebf3e7;
-    list-style-type: none;
-    height: 0;
-    overflow: hidden;
+    visibility: hidden;
 }
-
-#header > ul > li:hover .submenu {
-    height: 120px;
-}
-
-/* END OF MENU */
+    /* End of icon */
 
 
 
-/* BEGIN OF POSTS */
-
-#new-post { margin: 80px 40px;}
-#new-post > ul { list-style-type: none; }
-.post {
-    display: flex;
-    margin: 20px 0;
-}
-.post > .thumbnail { max-width: 40vh; }
-.post > .infos {
-    display: flex;
-    flex-direction: column;
-    margin-left: 25px;
-}
-.post > .infos > div > * { display: inline-block; }
-.post p { font-size: smaller; }
-.post p:not(.writer) { color: gray; }
-
-/* END OF POSTS */
-
-
-
-/* FOOTER */
-
-#footer {
-    bottom: 0;
-    width: 100%;
-    display: flex;
-}
-
-#footer > div {
-    padding: 20px 10px;
-}
-
-#footer h3 {
-    margin-top: 20px;
-    margin-bottom: 10px;
-}
-
-#ft-info {
-    margin-left: 40px;
-    flex-basis: 35%;
-}
-#ft-info > p {
-    font-size: small;
-    color: gray;
-}
-
-#ft-categories {
-    flex-basis: 35%;
-}
-
-#ft-categories > ul {
-    list-style: none;
-    display: inline-block;
-    margin-bottom: 20px;
-}
-
-#ft-categories > ul > li {
-    padding: 5px;
-}
-
-#ft-map {
-    margin-right: 40px;
-    flex-basis: 40%;
-}
+/* END OF NAVIGATION BAR */
