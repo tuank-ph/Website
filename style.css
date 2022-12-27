@@ -13,6 +13,8 @@ body:has(#p2:checked) #page2 {
     display: block;
 } */
 
+
+/* DECLARATION OF FONTS */
 @font-face {
     font-family: "Product Sans";
     src: url("./fonts/GoogleSans-Regular.woff2");
@@ -49,6 +51,45 @@ body:has(#p2:checked) #page2 {
     font-style: italic;
     font-weight: 800;
 }
+
+@font-face {
+    font-family: 'Material Icons';
+    font-style: normal;
+    font-weight: 400;
+    src: url("./fonts/MaterialIcons-Regular.woff2")
+}
+
+@font-face {
+    font-family: 'Material Icons Outlined';
+    font-style: normal;
+    font-weight: 400;
+    src: url("./fonts/MaterialIconsOutlined-Regular.woff2")
+}
+
+.material-icons, .material-icons-outlined {
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;  /* Preferred icon size */
+    display: inline-block;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+  
+    /* Support for all WebKit browsers. */
+    -webkit-font-smoothing: antialiased;
+    /* Support for Safari and Chrome. */
+    text-rendering: optimizeLegibility;
+  
+    /* Support for Firefox. */
+    -moz-osx-font-smoothing: grayscale;
+}
+.material-icons { font-family: Material Icons;}
+.material-icons-outlined { font-family: Material Icons Outlined;}
+
+/* END OF DECLARATION OF FONTS */
 
 * {
     margin: 0;
