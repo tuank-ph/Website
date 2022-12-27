@@ -75,6 +75,7 @@ nav > ul {
 
 nav > ul > li * {
     cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
 }
 
 /* Hide the radio button on Navigation bar */
