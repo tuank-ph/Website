@@ -20,6 +20,7 @@ body:has(#p2:checked) #page2 {
     src: url("./fonts/GoogleSans-Regular.woff2");
     font-style: normal;
     font-weight: 400;
+    font-display: swap;
 }
 @font-face {
     font-family: "Product Sans";
@@ -32,6 +33,7 @@ body:has(#p2:checked) #page2 {
     src: url("./fonts/GoogleSans-Bold.woff2");
     font-style: normal;
     font-weight: 800;
+    font-display: swap;
 }
 @font-face {
     font-family: "Product Sans";
