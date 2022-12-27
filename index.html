@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+	<meta name="description"
+  content="Khanh's personal website, build without using any framework, inspired by Material Design v3">
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
 	<link rel="preload" href="./fonts/MaterialIcons-Regular.woff2" as="font" type="font/woff2" crossorigin>
 	<link rel="preload" href="./fonts/MaterialIconsOutlined-Regular.woff2" as="font" type="font/woff2" crossorigin>
 	<link rel="preload" href="style.css" as="style" />
 	<link rel="stylesheet" href="./style.css">
-	<title>Document</title>
+	
 </head>
 <body>
 
@@ -21,39 +24,50 @@
 	<p id="page1">THIS IS PAGE 1</p>
 	<p id="page2">YAY PAGE 2</p> -->
 	
-	<nav id="navigation-bar">
-		<ul>
-			<li>
-				<input type="radio" name="page" id="page-home" value="page-home" checked>
-				<label for="page-home">
-					<label for="page-home" class="icon">
-						<span class="material-icons-outlined">home</span>
-						<span class="material-icons">home</span>
+	<header>
+		<nav id="navigation-bar">
+			<ul>
+				<li>
+					<input type="radio" name="page" id="nav-home" value="nav-home" checked>
+					<label for="nav-home">
+						<label for="nav-home" class="icon">
+							<span class="material-icons-outlined">home</span>
+							<span class="material-icons">home</span>
+						</label>
+						<label for="nav-home">Home</label>
 					</label>
-					<label for="page-home">Home</label>
-				</label>
-			</li>
-			<li>
-				<input type="radio" name="page" id="page-shop" value="page-shop">
-				<label for="page-shop">
-					<label for="page-shop" class="icon">
-						<span class="material-icons-outlined">local_grocery_store</span>
-						<span class="material-icons">local_grocery_store</span>
+				</li>
+				<li>
+					<input type="radio" name="page" id="nav-shop" value="nav-shop">
+					<label for="nav-shop">
+						<label for="nav-shop" class="icon">
+							<span class="material-icons-outlined">local_grocery_store</span>
+							<span class="material-icons">local_grocery_store</span>
+						</label>
+						<label for="nav-shop">Shop</label>
 					</label>
-					<label for="page-shop">Shop</label>
-				</label>
-			</li>
-			<li>
-				<input type="radio" name="page" id="page-contact" value="page-contact">
-				<label for="page-contact">
-					<label for="page-contact" class="icon">
-						<span class="material-icons-outlined">help_outline</span>
-						<span class="material-icons">help</span>
+				</li>
+				<li>
+					<input type="radio" name="page" id="nav-contact" value="nav-contact">
+					<label for="nav-contact">
+						<label for="nav-contact" class="icon">
+							<span class="material-icons-outlined">help_outline</span>
+							<span class="material-icons">help</span>
+						</label>
+						<label for="nav-contact">Contact</label>
 					</label>
-					<label for="page-contact">Contact</label>
-				</label>
-			</li>
-		</ul>
-	</nav>
+				</li>
+			</ul>
+		</nav>
+	</header>
+	<div id="page-home">
+		<main><h1>Home page</h1></main>
+	</div>
+	<div id="page-shop">
+		<main><h1>Shop page</h1></main>
+	</div>
+	<div id="page-contact">
+		<main><h1>Contact page</h1></main>
+	</div>
 </body>
 </html>
