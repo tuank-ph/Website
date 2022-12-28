@@ -75,6 +75,7 @@ body:has(#p2:checked) #page2 {
     font-family: 'Montserrat';
     src: url('./fonts/Montserrat-VariableFont_wght.ttf') format('truetype-variations');
     font-weight: 100 900;
+    font-display: swap;
 }
 
 
@@ -218,7 +219,6 @@ body {
 }
 
 div[id^=page] {
-    display: flex;
     flex-grow: 1;
     background-color: rgb(213, 237, 245);
     align-items: center;
@@ -228,8 +228,8 @@ div[id^=page] {
 #page-home, #page-shop, #page-contact {
     display: none;
 }
-body:has(#nav-home:checked) #page-home { display: flex; }
-body:has(#nav-shop:checked) #page-shop { display: flex; }
+body:has(#nav-home:checked) #page-home,
+body:has(#nav-shop:checked) #page-shop,
 body:has(#nav-contact:checked) #page-contact { display: flex; }
 
 @keyframes changeweight {
