@@ -55,10 +55,10 @@ body:has(#p2:checked) #page2 {
 }
 
 @font-face {
-    font-family: 'Material Icons';
+    font-family: 'Material Icons Round';
     font-style: normal;
     font-weight: 400;
-    src: url("./fonts/MaterialIcons-Regular.woff2");
+    src: url("./fonts/MaterialIconsRound-Regular.woff2");
     font-display: swap;
 }
 
@@ -70,7 +70,15 @@ body:has(#p2:checked) #page2 {
     font-display: swap;
 }
 
-.material-icons, .material-icons-outlined {
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('./fonts/Montserrat-VariableFont_wght.ttf') format('truetype-variations');
+    font-weight: 100 900;
+}
+
+
+.material-icons-round, .material-icons-outlined {
     font-weight: normal;
     font-style: normal;
     font-size: 24px;  /* Preferred icon size */
@@ -90,7 +98,7 @@ body:has(#p2:checked) #page2 {
     /* Support for Firefox. */
     -moz-osx-font-smoothing: grayscale;
 }
-.material-icons { font-family: Material Icons;}
+.material-icons-round { font-family: Material Icons Round;}
 .material-icons-outlined { font-family: Material Icons Outlined;}
 
 /* END OF DECLARATION OF FONTS */
@@ -179,13 +187,13 @@ nav input:hover + label .icon {
 
 nav input:checked + label > .icon,
 nav input:checked:hover + label > .icon {
-    transition: padding 250ms cubic-bezier(0, 0, 0, 1);
+    transition: padding 300ms cubic-bezier(0, 0, 0, 1);
     padding: 0 0;
 }
 
 nav input:checked + label span,
 nav input:checked:hover + label span {
-    transition: padding 250ms cubic-bezier(0, 0, 0, 1);
+    transition: padding 300ms cubic-bezier(0, 0, 0, 1);
     padding: 2px 16px;
     border-radius: 50vh;
 }
@@ -193,7 +201,7 @@ nav input:checked:hover + label span {
 nav input:checked:hover + label span { background-color: #b8daf0; }
 nav input:checked + label span { background-color: #c2e7ff; }
 
-nav input:not(:checked) + label span[class$=icons],
+nav input:not(:checked) + label span[class$=round],
 nav input:checked + label span[class$='outlined']  {
     position: absolute;
     visibility: hidden;
@@ -223,3 +231,22 @@ div[id^=page] {
 body:has(#nav-home:checked) #page-home { display: flex; }
 body:has(#nav-shop:checked) #page-shop { display: flex; }
 body:has(#nav-contact:checked) #page-contact { display: flex; }
+
+@keyframes changeweight {
+    from {
+        font-weight: 100;
+        letter-spacing: 15px;
+    }
+    to {
+        font-weight: 900;
+        letter-spacing: 1px;
+    }
+}
+
+.Page-text {
+    font-family: 'Montserrat';
+    animation-duration: 2.5s;
+    animation-name: changeweight;
+    animation-fill-mode: forwards;
+    animation-timing-function: cubic-bezier(0.2, 0.0, 0, 1.0);
+}
