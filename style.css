@@ -5,8 +5,8 @@
     src: url("./fonts/MaterialSymbolsRounded.woff2") format('truetype-variations');
     font-style: normal;
     font-weight: 100 700;
+    unicode-range: U+e88a, U+e8cc, U+e88e;
     font-display: swap;
-    unicode-range: U+E000-F8FF;
 }
 
 @font-face {
