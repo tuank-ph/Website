@@ -1,13 +1,13 @@
 
 /* DECLARATION OF FONTS */
 @font-face {
-    font-family: 'Material Symbols';
+    font-family: 'Material Symbols Rounded';
     src: url("./fonts/MaterialSymbolsRounded.woff2") format('truetype-variations');
     font-style: normal;
     font-weight: 100 700;
     font-display: swap;
+    unicode-range: U+E000-F8FF;
 }
-
 
 @font-face {
     font-family: 'Montserrat';
@@ -18,10 +18,10 @@
 
 
 .material-icons {
-    font-family: 'Material Symbols';
+    font-family: 'Material Symbols Rounded';
     font-weight: normal;
     font-style: normal;
-    font-size: 24px;  /* Preferred icon size */
+    font-size: 24px;
     display: inline-block;
     line-height: 1;
     text-transform: none;
@@ -30,6 +30,14 @@
     white-space: nowrap;
     direction: ltr;
   }
+
+input[id^=nav] + label > .icon > span::after {
+    position: relative;
+    bottom: -3px;
+}
+#nav-home + label > .icon > span::after { content: "\e88a";}
+#nav-shop + label > .icon > span::after { content: "\e8cc";}
+#nav-contact + label > .icon > span::after { content: "\e88e";}
 /* END OF DECLARATION OF FONTS */
 
 * {
