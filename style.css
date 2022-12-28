@@ -1,72 +1,10 @@
-/* body {
-    padding: 100px;
-}
-
-#page1, #page2{
-    display: none;
-}
-
-body:has(#p1:checked) #page1 {
-    display: block;
-}
-body:has(#p2:checked) #page2 {
-    display: block;
-} */
-
 
 /* DECLARATION OF FONTS */
 @font-face {
-    font-family: "Product Sans";
-    src: url("./fonts/GoogleSans-Regular.woff2");
+    font-family: 'Material Symbols';
+    src: url("./fonts/MaterialSymbolsRounded.woff2") format('truetype-variations');
     font-style: normal;
-    font-weight: 400;
-    font-display: swap;
-}
-@font-face {
-    font-family: "Product Sans";
-    src: url("./fonts/GoogleSans-Medium.woff2");
-    font-style: normal;
-    font-weight: 600;
-}
-@font-face {
-    font-family: "Product Sans";
-    src: url("./fonts/GoogleSans-Bold.woff2");
-    font-style: normal;
-    font-weight: 700;
-    font-display: swap;
-}
-@font-face {
-    font-family: "Product Sans";
-    src: url("./fonts/GoogleSans-Italic.woff2");
-    font-style: italic;
-    font-weight: 400;
-}
-@font-face {
-    font-family: "Product Sans";
-    src: url("./fonts/GoogleSans-MediumItalic.woff2");
-    font-style: italic;
-    font-weight: 600;
-}
-@font-face {
-    font-family: "Product Sans";
-    src: url("./fonts/GoogleSans-BoldItalic.woff2");
-    font-style: italic;
-    font-weight: 700;
-}
-
-@font-face {
-    font-family: 'Material Icons Round';
-    font-style: normal;
-    font-weight: 400;
-    src: url("./fonts/MaterialIconsRound-Regular.woff2");
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Material Icons Outlined';
-    font-style: normal;
-    font-weight: 400;
-    src: url("./fonts/MaterialIconsOutlined-Regular.woff2");
+    font-weight: 100 700;
     font-display: swap;
 }
 
@@ -79,7 +17,8 @@ body:has(#p2:checked) #page2 {
 }
 
 
-.material-icons-round, .material-icons-outlined {
+.material-icons {
+    font-family: 'Material Symbols';
     font-weight: normal;
     font-style: normal;
     font-size: 24px;  /* Preferred icon size */
@@ -90,24 +29,13 @@ body:has(#p2:checked) #page2 {
     word-wrap: normal;
     white-space: nowrap;
     direction: ltr;
-  
-    /* Support for all WebKit browsers. */
-    -webkit-font-smoothing: antialiased;
-    /* Support for Safari and Chrome. */
-    text-rendering: optimizeLegibility;
-  
-    /* Support for Firefox. */
-    -moz-osx-font-smoothing: grayscale;
-}
-.material-icons-round { font-family: Material Icons Round;}
-.material-icons-outlined { font-family: Material Icons Outlined;}
-
+  }
 /* END OF DECLARATION OF FONTS */
 
 * {
     margin: 0;
     padding: 0;
-    font-family: 'Product Sans';
+    font-family: 'Montserrat';
 }
 
 header {
@@ -117,6 +45,7 @@ header {
     justify-content: center;
     height: 8vh;
     min-height: 60px;
+    max-height: 80px;
 }
 header > * {
     flex: 1 1 0px;
@@ -153,7 +82,8 @@ nav > ul > li > label {
 }
 
 nav label:not([class*=icons]) {
-    font-size: calc(10px + 0.4vw);
+    font-size: 14px;
+    font-weight: 400;
 }
 
 nav * {
@@ -167,6 +97,7 @@ input:checked + label * {
 }
 
 input:checked + label > label{
+    transition: font-weight 0.2s cubic-bezier(0.2, 0, 0, 1);
     font-weight: 700;
 }
 
@@ -179,6 +110,7 @@ nav .icon {
 }
 nav .icon span {
     padding: 2px 0;
+    font-weight: 350;
 }
 
 nav input:hover + label .icon {
@@ -202,12 +134,20 @@ nav input:checked:hover + label span {
 nav input:checked:hover + label span { background-color: #b8daf0; }
 nav input:checked + label span { background-color: #c2e7ff; }
 
-nav input:not(:checked) + label span[class$=round],
-nav input:checked + label span[class$='outlined']  {
-    position: absolute;
-    visibility: hidden;
+nav input:hover:not(:checked) + label span {
+    transition: font-weight 0.5s cubic-bezier(0.2, 0, 0, 1);
+    font-weight: 600;
 }
-    /* End of icon */
+
+@keyframes checked-hover {
+    0% { font-variation-settings: 'wght' 350, 'FILL' 1; }
+    100% { font-variation-settings: 'wght' 600, 'FILL' 1; }
+}
+nav input:checked:not(:hover) + label span  { font-variation-settings: 'FILL' 1; }
+nav input:checked:hover + label span { animation: checked-hover 0.5s forwards cubic-bezier(0.2, 0, 0, 1); }
+
+
+/* End of icon */
 
 /* END OF NAVIGATION BAR */
 
@@ -225,28 +165,9 @@ div[id^=page] {
     justify-content: center;
 }
 
-#page-home, #page-shop, #page-contact {
-    display: none;
-}
+#page-home, #page-shop, #page-contact { display: none; }
 body:has(#nav-home:checked) #page-home,
 body:has(#nav-shop:checked) #page-shop,
 body:has(#nav-contact:checked) #page-contact { display: flex; }
 
-@keyframes changeweight {
-    from {
-        font-weight: 100;
-        letter-spacing: 15px;
-    }
-    to {
-        font-weight: 900;
-        letter-spacing: 1px;
-    }
-}
 
-.Page-text {
-    font-family: 'Montserrat';
-    animation-duration: 2.5s;
-    animation-name: changeweight;
-    animation-fill-mode: forwards;
-    animation-timing-function: cubic-bezier(0.2, 0.0, 0, 1.0);
-}
