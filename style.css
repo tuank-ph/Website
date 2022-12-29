@@ -13,7 +13,9 @@
     font-family: 'Montserrat';
 }
 
-header {
+
+/* BEGIN OF NAVIGATION BAR */
+nav {
     background-color: #f3f6fc;
     display: flex;
     align-items: center;
@@ -21,17 +23,6 @@ header {
     height: 8vh;
     min-height: 60px;
     max-height: 80px;
-}
-header > * {
-    flex: 1 1 0px;
-}
-
-
-/* BEGIN OF NAVIGATION BAR */
-nav {
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
 nav > ul {
@@ -133,7 +124,7 @@ body {
     flex-direction: column;
 }
 
-div[id^=page] {
+div[id^=page]:not(#page-home) {
     flex-grow: 1;
     background-color: rgb(213, 237, 245);
     align-items: center;
@@ -145,4 +136,30 @@ body:has(#nav-home:checked) #page-home,
 body:has(#nav-shop:checked) #page-shop,
 body:has(#nav-contact:checked) #page-contact { display: flex; }
 
+h1, h2, h3, h4, h5, p {
+    color: #1f1f1f;
+}
 
+
+/* HOME PAGE */
+#page-home header {
+    width: 100vw;
+    aspect-ratio: 4/1;
+    margin: 2vw;
+    background-image: url(./images/header-home.jpg);
+    background-size: cover;
+    border-radius: 24px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 5vw;
+    gap: 5px;
+}
+
+#page-home header h1 {
+    font-size: calc((60vw + 6rem) / 10);
+}
+#page-home header p {
+    font-weight: 450;
+    font-size: calc((40vw + 20rem) / 40);
+}
