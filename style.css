@@ -171,7 +171,7 @@ h1, h2, h3, h4, h5, p {
     width: 100vw;
     aspect-ratio: 4/1;
     margin: 2vw;
-    background-image: url(./images/header-home.jpg);
+    background-image: url(./images/header-home.webp);
     background-size: cover;
     border-radius: 24px;
     display: flex;
