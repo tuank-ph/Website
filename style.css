@@ -186,5 +186,5 @@ h1, h2, h3, h4, h5, p {
 }
 #page-home header p {
     font-weight: 450;
-    font-size: calc((40vw + 20rem) / 40);
+    font-size: calc((35vw + 25rem) / 40);
 }
