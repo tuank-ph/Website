@@ -7,9 +7,9 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>TUANK Website</title>
-	<link rel="preload" as="image" href="images/header-home.webp">
 	<link rel="preload" as="font" href="./fonts/Material-Symbols-Rounded.woff2" crossorigin>
 	<link rel="preload" as="font" href="./fonts/Montserrat-VariableFont_wght.woff2" crossorigin>
+	<link rel="preload" as="script" href="./lazyload.min.js">
 	<link rel="preload" href="./style.css" as="style"/>
 	<link rel="stylesheet" href="./style.css">
 </head>
@@ -46,12 +46,16 @@
 		</ul>
 	</nav>
 	<div id="page-home">
-		<header>
-			<!-- <img src="./images/header-home.jpg" alt=""> -->
+		<header class="lazy" data-bg="./images/header-home.webp">
 			<h1>TUANK Website</h1>
 			<p>I'm Tuan Khanh. Welcome to my personal website</p>
-			<p>Build with pure HTML CSS, no framework.🎉</p>
+			<p>Build with pure HTML CSS, no JS or framework.🎉</p>
 		</header>
+		<br>
+		<div class="card"></div>
+		<div class="card"></div>
+		<div class="card"></div>
+		<div class="card"></div>
 	</div>
 	<div id="page-shop">
 		<main><h1 class="Page-text">Shop page</h1></main>
@@ -59,5 +63,7 @@
 	<div id="page-contact">
 		<main><h1 class="Page-text">Contact page</h1></main>
 	</div>
+	<script src="./lazyload.min.js"></script>
+	<script> new LazyLoad(); </script>
 </body>
 </html>
