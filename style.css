@@ -228,7 +228,7 @@ h1, h2, h3, h4, h5, p {
 #page-home header {
     aspect-ratio: 4/1;
     margin: 5px 2vw;
-    /* background-image: url(./images/header-home.webp); */
+    background-image: url(./images/header-home.webp);
     background-size: cover;
     border-radius: 24px;
     display: flex;
