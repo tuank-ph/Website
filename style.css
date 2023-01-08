@@ -38,7 +38,7 @@
 
 /* END OF DECLARATION OF FONTS */
 
-:root {
+body:has(#nav-home:checked) * {
     --primary: #0061a4;
     --on-primary: #ffffff;
     --primary-container: #d1e4ff;
@@ -220,6 +220,10 @@ h1, h2, h3, h4, h5, p {
     color: #1f1f1f;
 }
 
+
+
+
+
 /* HOME PAGE */
 #page-home {
     flex-direction: column;
@@ -317,11 +321,11 @@ background-color: var(--elevation-3);
 }
 
 #page-home .product-name {
-    color: black;
+    color: var(--on-surface);
 }
 
 #page-home .product-name {
-    color: black;
+    color: var(--on-surface);
 }
 
 #page-home .product-card > .btn-addtocart {
@@ -383,3 +387,5 @@ background-color: var(--elevation-3);
 .icon {
     font-size: 18px;
 }
+
+iframe { border: 0;}
