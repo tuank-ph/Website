@@ -10,84 +10,387 @@
 	<link rel="preload" as="font" href="./fonts/Material-Symbols-Rounded.woff2" crossorigin>
 	<link rel="preload" as="font" href="./fonts/Montserrat-VariableFont_wght.woff2" crossorigin>
 	<link rel="preload" as="font" href="./fonts/BigShouldersDisplay-VariableFont_wght.ttf" crossorigin>
-	<!-- <link rel="preload" as="image" href="./images/header-home.webp" crossorigin> -->
-	<link rel="preload" as="image" href="https://assets.adidas.com/images/w_400,h_400,f_auto,q_auto,fl_lossy,c_fill,g_auto/fcbd583fdb1044159c9cae61012709dc_9366/camo-series-sweat-pants.jpg" crossorigin>
-	<link rel="preload" as="script" href="./lazyload.min.js">
+	<!-- <link rel="preload" as="image" href="https://assets.adidas.com/images/w_400,h_400,f_auto,q_auto,fl_lossy,c_fill,g_auto/fcbd583fdb1044159c9cae61012709dc_9366/camo-series-sweat-pants.jpg" crossorigin> -->
 	<link rel="preload" href="./style.css" as="style"/>
 	<link rel="stylesheet" href="./style.css">
 </head>
 <body>
-	<nav id="navigation-bar">
-		<ul>
-			<li>
-				<input type="radio" name="page" id="nav-home" value="nav-home" checked>
-				<label for="nav-home">
-					<label for="nav-home" class="icon">
-						<span class="material-symbols-rounded" >home</span>
+	<header>
+		<nav id="navigation-bar">
+			<ul>
+				<li>
+					<input type="radio" name="page" id="nav-home" value="nav-home" >
+					<label for="nav-home">
+						<label for="nav-home" class="icon">
+							<span class="material-symbols-rounded">home</span>
+						</label>
+						<label for="nav-home">Home</label>
 					</label>
-					<label for="nav-home">Home</label>
-				</label>
-			</li>
-			<li>
-				<input type="radio" name="page" id="nav-shop" value="nav-shop">
-				<label for="nav-shop">
-					<label for="nav-shop" class="icon">
-						<span class="material-symbols-rounded">shopping_cart</span>
+				</li>
+				<li>
+					<input type="radio" name="page" id="nav-shop" value="nav-shop" >
+					<label for="nav-shop">
+						<label for="nav-shop" class="icon">
+							<span class="material-symbols-rounded">shopping_cart</span>
+						</label>
+						<label for="nav-shop">Shop</label>
 					</label>
-					<label for="nav-shop">Shop</label>
-				</label>
-			</li>
-			<li>
-				<input type="radio" name="page" id="nav-contact" value="nav-contact">
-				<label for="nav-contact">
-					<label for="nav-contact" class="icon">
-						<span class="material-symbols-rounded">info</span>
+				</li>
+				<li>
+					<input type="radio" name="page" id="nav-contact" value="nav-contact" checked>
+					<label for="nav-contact">
+						<label for="nav-contact" class="icon">
+							<span class="material-symbols-rounded">info</span>
+						</label>
+						<label for="nav-contact">Contact</label>
 					</label>
-					<label for="nav-contact">Contact</label>
-				</label>
-			</li>
-		</ul>
-	</nav>
-	<div id="page-home">
-		<header class="lazy" data-bg="./images/header-home.webp">
+				</li>
+			</ul>
+		</nav>
+		<input type="checkbox" class="switch-theme" id="theme-light">
+		<label for="theme-light" >
+			<span class="material-symbols-rounded">light_mode</span>
+		</label>
+		<!-- <input type="checkbox" class="switch-theme" id="theme-dark">
+		<label for="theme-dark" >
+			<span class="material-symbols-rounded">dark_mode</span>
+		</label> -->
+	</header>
+	<div id="page-home-n">
+		<header>
 			<h1>TUANK Website</h1>
 			<p>I'm Tuan Khanh. Welcome to my personal website</p>
 			<p>Build with pure HTML CSS, no JS or framework.🎉</p>
 		</header>
-		<br>
-		<div class="bor">
-			<div class="knob"></div>
-			<h1>NEW ARRIVALS</h1>
-		</div>
-		<div class="new-arrivals">
-			<div class="product-card">
-				<img alt="Focus Olive / Collegiate Gold" width="400" height="400"
-				src="https://assets.adidas.com/images/w_400,h_400,f_auto,q_auto,fl_lossy,c_fill,g_auto/fcbd583fdb1044159c9cae61012709dc_9366/camo-series-sweat-pants.jpg">
-				<p class="product-name">Camo Series Sweat Pants</p>
-				<button class="btn-favorite">
-					<span class="material-symbols-rounded">
-						favorite
-					</span>
-				</button>
-				<button class="btn-addtocart">
-					<span class="material-symbols-rounded icon">
-						add_shopping_cart
-					</span>
-					Add to cart
-				</button>
+		<main>
+			<h2 class="heading">New arrivals</h2>
+			<div class="v-scroll-div">
+				<div class="product-card">
+					<p class="best-seller">Best seller</p>
+					<img height="200" src="https://d13o3tuo14g2wf.cloudfront.net/thumbnails%2Flarge%2FAsset+Hierarchy%2FConsumer+Assets%2FMobile+Phones%2FHandsets%2F2022+Phones%2FXQCT62-B%2F01+Xperia+1+IV_mmWave_group_black.png.png?Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9kMTNvM3R1bzE0ZzJ3Zi5jbG91ZGZyb250Lm5ldC90aHVtYm5haWxzJTJGbGFyZ2UlMkZBc3NldCtIaWVyYXJjaHklMkZDb25zdW1lcitBc3NldHMlMkZNb2JpbGUrUGhvbmVzJTJGSGFuZHNldHMlMkYyMDIyK1Bob25lcyUyRlhRQ1Q2Mi1CJTJGMDErWHBlcmlhKzErSVZfbW1XYXZlX2dyb3VwX2JsYWNrLnBuZy5wbmciLCJDb25kaXRpb24iOnsiRGF0ZUxlc3NUaGFuIjp7IkFXUzpFcG9jaFRpbWUiOjIxNDU3NjIwMDB9fX1dfQ__&Signature=csGpSQgYksBIJgO1yVOKmMpG~kqyS0KftKRSKtVNzNW6CTSU~uKHij6Mzx3iyzJaaSXDbKzppUdwSN6WeDYUfyFAOxvlm5dJBC6E67Lr1xoPXxZi0cy--K5tS20vQgE2CpIDk2InwmkPuag9f5ScBakg9lozATtfZ0YsQ4S2ZhbadJXc-9NnUHZQQNR9E8fLIl3rY8zW~lvBlYsDc0GOjxzLbv8yA5tF19trL10dSYs4ShfnMGHc15Hn1hWe3tauI2TvbgLspZJepAfDUkY0Jl~ntQTNx8VUNzyQpatTIBWIcl8nxPcIplSK7KnRt8FZ55HCEpacXFzaLXi5id6Wng__&Key-Pair-Id=K37BLT9C6HMMJ0">
+					<p class="product-name">Sony Xperia 1 IV</p>
+					<p>Starting from</p>
+					<p class="product-price">$999.00</p>
+					<button class="buy">Buy now</button>
+				</div>
+				<div class="product-card">
+					<p class="best-seller">Best seller</p>
+					<img height="200" src="https://d13o3tuo14g2wf.cloudfront.net/thumbnails%2Flarge%2F_default_upload_bucket%2F03.-WF-1000XM4_B_case_open_one_side_out-Mid_1.png.png?Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9kMTNvM3R1bzE0ZzJ3Zi5jbG91ZGZyb250Lm5ldC90aHVtYm5haWxzJTJGbGFyZ2UlMkZfZGVmYXVsdF91cGxvYWRfYnVja2V0JTJGMDMuLVdGLTEwMDBYTTRfQl9jYXNlX29wZW5fb25lX3NpZGVfb3V0LU1pZF8xLnBuZy5wbmciLCJDb25kaXRpb24iOnsiRGF0ZUxlc3NUaGFuIjp7IkFXUzpFcG9jaFRpbWUiOjIxNDU3NjIwMDB9fX1dfQ__&Signature=i8XaX0uGfwmWW9owWKBMgcVMdOn9nWdJFyk86mXSYjg5dwEm5~VXoUtWKDjMqkclZ~LJ5RC-W58x16TU~HnhIBsXf9D8~mqZegX-KbEJeMxkZcpUziUjYND-WaEpuIwE~2vxtQuaX6MK7fvcj5oeUqEGrnhnYJq9MDrdlNmMLs74wutpzGrMB52Z8Gxa0uDOEOvmu60T7F~CWJxUGMMfbiKuDcH8u-936uMc9ttFzhrBeUkzcAkof~2vDzyD0oS98IpBLqQLRNeOhXRoyMbjNFmkRcPXipx6ZEH1beE9bXyIUV9CRAK6g8m92QGMoa0~Vu5ABD3e3cB~N4jdXpou2Q__&Key-Pair-Id=K37BLT9C6HMMJ0">
+					<p class="product-name">Sony WF-1000XM4</p>
+					<p>Starting from</p>
+					<p class="product-price">$229.00</p>
+					<button class="buy">Buy now</button>
+				</div>
+				<div class="product-card">
+					<p class="best-seller">Best seller</p>
+					<img height="200" src="https://d13o3tuo14g2wf.cloudfront.net/assets%2FAsset+Hierarchy%2FConsumer+Assets%2FMobile+Phones%2FXperia+Series%2FXperia+5+IV%2FXPERIA+5+IV+-+eComm+Product+Images%2F01b+Xperia+5+IV_group_black.png?Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9kMTNvM3R1bzE0ZzJ3Zi5jbG91ZGZyb250Lm5ldC9hc3NldHMlMkZBc3NldCtIaWVyYXJjaHklMkZDb25zdW1lcitBc3NldHMlMkZNb2JpbGUrUGhvbmVzJTJGWHBlcmlhK1NlcmllcyUyRlhwZXJpYSs1K0lWJTJGWFBFUklBKzUrSVYrLStlQ29tbStQcm9kdWN0K0ltYWdlcyUyRjAxYitYcGVyaWErNStJVl9ncm91cF9ibGFjay5wbmciLCJDb25kaXRpb24iOnsiRGF0ZUxlc3NUaGFuIjp7IkFXUzpFcG9jaFRpbWUiOjIxNDU3NjIwMDB9fX1dfQ__&Signature=VrjaplXeMYmM~7KocwBOspYNH0VwmVwDwwvCsQJQXTGMnw9PK9Boeb63lgzlolOIPXmnJPSAkAoJvyZWrxGlHVN0a9Jn2jRnJBeINgUi5NAlyL0Qli6WcxC5-uz4eL4p47WoHJJuXGz3mUDYAoV-sbnhIi4~bkhMN9wQdzWH~VC~iE9e-Nxcxm8CU61fcAcRNgkEEO06KqbceExkMJAmnoeiMdvbSMkBE~FkMe5AnvpVT-rpYIuZCnKI5hP5xV1layfxS1FjlkVICrIYtYIcIQIG0~uoYdkdfSDNh-uWQDWsk7XOHVRoYBXArN848YnnUWglpANH25LIGX4Btx1ElQ__&Key-Pair-Id=K37BLT9C6HMMJ0">
+					<p class="product-name">Sony Xperia 5 IV</p>
+					<p>Starting from</p>
+					<p class="product-price">$799.00</p>
+					<button class="buy">Buy now</button>
+				</div>
+				<div class="product-card">
+					<p class="best-seller">Best seller</p>
+					<img height="200" src="https://d1erhn8sljv386.cloudfront.net/8_0yF7jUSMFmWDPke_UAtZpUNYI=/fit-in/1000x1000/filters:format(webp)/https://s3.amazonaws.com/lmbucket0/media/product/t-mobile-apple-watch-series-6-40mm-frontimage-space-gray-aluminum-black.png">
+					<p class="product-name">Apple Watch Series 6</p>
+					<p>Starting from</p>
+					<p class="product-price">$799.00</p>
+					<button class="buy">Buy now</button>
+				</div>
+				<div class="product-card">
+					<p class="best-seller">Best seller</p>
+					<img heigth="200" src="https://lh3.googleusercontent.com/8yCcdu4Y5Qy9--rB7hEYKN0kOBuijTO_P6lErL1g4PkU5uqb5pyVZm2IwaFJOXQLFRrsYyW4YGGrWgkHKeOh_ZJTyIb6DfKRMpgC4iLL">
+					<p class="product-name">Samsung Galaxy S23 Ultra</p>
+					<p>Starting from</p>
+					<p class="product-price">$1,199.00</p>
+					<button class="buy">Buy now</button>
+				</div>
+				<div class="product-card">
+					<p class="best-seller">Best seller</p>
+					<img heigth="200" src="https://ss7.vzw.com/is/image/VerizonWireless/iphone-14-pro-max-deep-purple-fall22-a?$device-lg$">
+					<p class="product-name">Iphone 14 Pro Max</p>
+					<p>Starting from</p>
+					<p class="product-price">$1,199.00</p>
+					<button class="buy">Buy now</button>
+				</div>
 			</div>
-			<div class="product-card"></div>
-			<div class="product-card"></div>
-			<div class="product-card"></div>
-		</div>
+			<h2 class="heading">Categories</h2>
+			<div class="categories">
+				<div class="ctgr-card">
+					<img loading="lazy" height="200" src="https://lh3.googleusercontent.com/2QKYQg6WuyEbx0Kd83N8-_lhs0Vk-GYQWCqsQjtuGejiimGFRTp-FEc9tDfMer_xoj7FaOMuAE7pg0Uj-rpWS9A2RpZiCQpZSXi3=rw-e365-w1050">
+					<p class="ctgr-text">Smartphones</p>
+					<p class="ctgr-desc">Bring home a smarter phone</p>
+				</div>
+				<div class="ctgr-card">
+					<img loading="lazy" height="200" src="https://image-us.samsung.com/SamsungUS/home/computing/chromebooks/xe520qea-kb1us/1.png">
+					<p class="ctgr-text">Chromebooks & Laptops</p>
+					<p class="ctgr-desc">Latest Premium Laptops and Affordable Chromebooks</p>
+				</div>
+				<div class="ctgr-card">
+					<img loading="lazy" height="200" src="https://www.fitbit.com/global/content/dam/fitbit/global/pdp/versa2/hero-static/black-carbon-aluminum/versa2-3qtr-black.png">
+					<p class="ctgr-text">Smart Watches</p>
+					<p class="ctgr-desc">Explore the latest smart watches for everyone</p>
+				</div>
+				<div class="ctgr-card">
+					<img loading="lazy" height="200" src="https://cdn.shoplightspeed.com/shops/633289/files/48240715/apple-airpods-pro-2nd-gen-with-magsafe-charging-ca.jpg">
+					<p class="ctgr-text">Wireless Earbuds</p>
+					<p class="ctgr-desc">Sustainably sourced audio</p>
+				</div>
+				<div class="ctgr-card">
+					<img loading="lazy" height="200" src="https://image-us.samsung.com/SamsungUS/home/mobile/tablets/galaxy-tab-s7-fe/GalaxyTabS7plusLite_Combo_001_MysticBlack_1600x1200.png">
+					<p class="ctgr-text">Tablets</p>
+					<p class="ctgr-desc">Do more with big screen</p>
+				</div>
+			</div>
+			<p id="scroll-hint">Maybe you scrolled too far? Tap the <span class="material-symbols-rounded icon">expand_less</span> button to come back to the top.</p>
+		</main>
 	</div>
 	<div id="page-shop">
-		<main><h1 class="Page-text">Shop page</h1></main>
+		<aside>
+			<h2>Filter product</h2>
+			<h4 class="heading">Filter by Brand</h4>
+			<ul class="filter-list">
+				<li><input type="checkbox" id="apple" checked> <label for="apple">Apple</label></li>
+				<li><input type="checkbox" id="sony" checked> <label for="sony">Sony</label></li>
+				<li><input type="checkbox" id="samsung" checked> <label for="samsung">Samsung</label></li>
+				<li><input type="checkbox" id="google" checked> <label for="google">Google</label></li>
+			</ul>
+			<h4 class="heading">Filter by Type</h4>
+			<ul class="filter-list">
+				<li><input type="checkbox" id="smartphone" checked> <label for="smartphone">Smartphone</label></li>
+				<li><input type="checkbox" id="smart-watch" checked> <label for="smart-watch">Smart Watch</label></li>
+				<li><input type="checkbox" id="earbuds" checked> <label for="earbuds">Earbuds</label></li>
+				<li><input type="checkbox" id="laptop" checked> <label for="laptop">Laptops</label></li>
+			</ul>
+		</aside>
+		<main>
+			<div id="product-list">
+				<div class="product-card apple smart-watch">
+					<img height="200" src="https://d1erhn8sljv386.cloudfront.net/8_0yF7jUSMFmWDPke_UAtZpUNYI=/fit-in/1000x1000/filters:format(webp)/https://s3.amazonaws.com/lmbucket0/media/product/t-mobile-apple-watch-series-6-40mm-frontimage-space-gray-aluminum-black.png">
+					<p class="product-name">Apple Watch Series 6</p>
+					<div class="product-categories">
+						<div class="product-category">Apple</div>
+						<div class="product-category">Smart watch</div>
+					</div>
+					<div class="bottom-bar">
+						<p class="product-price">$799.00</p>
+						<button class="buy">Buy now</button>
+					</div>
+				</div>
+				<div class="product-card sony smartphone">
+					<img height="200" src="https://d13o3tuo14g2wf.cloudfront.net/thumbnails%2Flarge%2FAsset+Hierarchy%2FConsumer+Assets%2FMobile+Phones%2FHandsets%2F2022+Phones%2FXQCT62-B%2F01+Xperia+1+IV_mmWave_group_black.png.png?Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9kMTNvM3R1bzE0ZzJ3Zi5jbG91ZGZyb250Lm5ldC90aHVtYm5haWxzJTJGbGFyZ2UlMkZBc3NldCtIaWVyYXJjaHklMkZDb25zdW1lcitBc3NldHMlMkZNb2JpbGUrUGhvbmVzJTJGSGFuZHNldHMlMkYyMDIyK1Bob25lcyUyRlhRQ1Q2Mi1CJTJGMDErWHBlcmlhKzErSVZfbW1XYXZlX2dyb3VwX2JsYWNrLnBuZy5wbmciLCJDb25kaXRpb24iOnsiRGF0ZUxlc3NUaGFuIjp7IkFXUzpFcG9jaFRpbWUiOjIxNDU3NjIwMDB9fX1dfQ__&Signature=csGpSQgYksBIJgO1yVOKmMpG~kqyS0KftKRSKtVNzNW6CTSU~uKHij6Mzx3iyzJaaSXDbKzppUdwSN6WeDYUfyFAOxvlm5dJBC6E67Lr1xoPXxZi0cy--K5tS20vQgE2CpIDk2InwmkPuag9f5ScBakg9lozATtfZ0YsQ4S2ZhbadJXc-9NnUHZQQNR9E8fLIl3rY8zW~lvBlYsDc0GOjxzLbv8yA5tF19trL10dSYs4ShfnMGHc15Hn1hWe3tauI2TvbgLspZJepAfDUkY0Jl~ntQTNx8VUNzyQpatTIBWIcl8nxPcIplSK7KnRt8FZ55HCEpacXFzaLXi5id6Wng__&Key-Pair-Id=K37BLT9C6HMMJ0">
+					<p class="product-name">Sony Xperia 1 IV</p>
+					<div class="product-categories">
+						<div class="product-category">Sony</div>
+						<div class="product-category">Smartphone</div>
+					</div>
+					<div class="bottom-bar">
+						<p class="product-price">$999.00</p>
+						<button class="buy">Buy now</button>
+					</div>
+				</div>
+				<div class="product-card sony earbuds">
+					<img height="200" src="https://d13o3tuo14g2wf.cloudfront.net/thumbnails%2Flarge%2F_default_upload_bucket%2F03.-WF-1000XM4_B_case_open_one_side_out-Mid_1.png.png?Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9kMTNvM3R1bzE0ZzJ3Zi5jbG91ZGZyb250Lm5ldC90aHVtYm5haWxzJTJGbGFyZ2UlMkZfZGVmYXVsdF91cGxvYWRfYnVja2V0JTJGMDMuLVdGLTEwMDBYTTRfQl9jYXNlX29wZW5fb25lX3NpZGVfb3V0LU1pZF8xLnBuZy5wbmciLCJDb25kaXRpb24iOnsiRGF0ZUxlc3NUaGFuIjp7IkFXUzpFcG9jaFRpbWUiOjIxNDU3NjIwMDB9fX1dfQ__&Signature=i8XaX0uGfwmWW9owWKBMgcVMdOn9nWdJFyk86mXSYjg5dwEm5~VXoUtWKDjMqkclZ~LJ5RC-W58x16TU~HnhIBsXf9D8~mqZegX-KbEJeMxkZcpUziUjYND-WaEpuIwE~2vxtQuaX6MK7fvcj5oeUqEGrnhnYJq9MDrdlNmMLs74wutpzGrMB52Z8Gxa0uDOEOvmu60T7F~CWJxUGMMfbiKuDcH8u-936uMc9ttFzhrBeUkzcAkof~2vDzyD0oS98IpBLqQLRNeOhXRoyMbjNFmkRcPXipx6ZEH1beE9bXyIUV9CRAK6g8m92QGMoa0~Vu5ABD3e3cB~N4jdXpou2Q__&Key-Pair-Id=K37BLT9C6HMMJ0">
+					<p class="product-name">Sony WF-1000XM4</p>
+					<div class="product-categories">
+						<div class="product-category">Sony</div>
+						<div class="product-category">Earbuds</div>
+					</div>
+					<div class="bottom-bar">
+						<p class="product-price">$229.00</p>
+						<button class="buy">Buy now</button>
+					</div>
+				</div>
+				<div class="product-card sony smartphone">
+					<img height="200" src="https://d13o3tuo14g2wf.cloudfront.net/assets%2FAsset+Hierarchy%2FConsumer+Assets%2FMobile+Phones%2FXperia+Series%2FXperia+5+IV%2FXPERIA+5+IV+-+eComm+Product+Images%2F01b+Xperia+5+IV_group_black.png?Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9kMTNvM3R1bzE0ZzJ3Zi5jbG91ZGZyb250Lm5ldC9hc3NldHMlMkZBc3NldCtIaWVyYXJjaHklMkZDb25zdW1lcitBc3NldHMlMkZNb2JpbGUrUGhvbmVzJTJGWHBlcmlhK1NlcmllcyUyRlhwZXJpYSs1K0lWJTJGWFBFUklBKzUrSVYrLStlQ29tbStQcm9kdWN0K0ltYWdlcyUyRjAxYitYcGVyaWErNStJVl9ncm91cF9ibGFjay5wbmciLCJDb25kaXRpb24iOnsiRGF0ZUxlc3NUaGFuIjp7IkFXUzpFcG9jaFRpbWUiOjIxNDU3NjIwMDB9fX1dfQ__&Signature=VrjaplXeMYmM~7KocwBOspYNH0VwmVwDwwvCsQJQXTGMnw9PK9Boeb63lgzlolOIPXmnJPSAkAoJvyZWrxGlHVN0a9Jn2jRnJBeINgUi5NAlyL0Qli6WcxC5-uz4eL4p47WoHJJuXGz3mUDYAoV-sbnhIi4~bkhMN9wQdzWH~VC~iE9e-Nxcxm8CU61fcAcRNgkEEO06KqbceExkMJAmnoeiMdvbSMkBE~FkMe5AnvpVT-rpYIuZCnKI5hP5xV1layfxS1FjlkVICrIYtYIcIQIG0~uoYdkdfSDNh-uWQDWsk7XOHVRoYBXArN848YnnUWglpANH25LIGX4Btx1ElQ__&Key-Pair-Id=K37BLT9C6HMMJ0">
+					<p class="product-name">Sony Xperia 5 IV</p>
+					<div class="product-categories">
+						<div class="product-category">Sony</div>
+						<div class="product-category">Smartphone</div>
+					</div>
+					<div class="bottom-bar">
+						<p class="product-price">$799.00</p>
+						<button class="buy">Buy now</button>
+					</div>
+				</div>
+				<div class="product-card samsung smartphone">
+					<img height="200" src="https://lh3.googleusercontent.com/8yCcdu4Y5Qy9--rB7hEYKN0kOBuijTO_P6lErL1g4PkU5uqb5pyVZm2IwaFJOXQLFRrsYyW4YGGrWgkHKeOh_ZJTyIb6DfKRMpgC4iLL">
+					<p class="product-name">Samsung Galaxy S23 Ultra</p>
+					<div class="product-categories">
+						<div class="product-category">Samsung</div>
+						<div class="product-category">Smartphone</div>
+					</div>
+					<div class="bottom-bar">
+						<p class="product-price">$1,199.00</p>
+						<button class="buy">Buy now</button>
+					</div>
+				</div>
+				<div class="product-card apple smartphone">
+					<img height="200" src="https://ss7.vzw.com/is/image/VerizonWireless/iphone-14-pro-max-deep-purple-fall22-a?$device-lg$">
+					<p class="product-name">Iphone 14 Pro Max</p>
+					<div class="product-categories">
+						<div class="product-category">Apple</div>
+						<div class="product-category">Smartphone</div>
+					</div>
+					<div class="bottom-bar">
+						<p class="product-price">$1,199.00</p>
+						<button class="buy">Buy now</button>
+					</div>
+				</div>
+				<div class="product-card google smartphone">
+					<img height="200" src="https://cdn.tmobile.com/content/dam/t-mobile/en-p/cell-phones/Google/Google-Pixel-7-Pro/Hazel/Google-Pixel-7-Pro-Hazel-frontimage.png">
+					<p class="product-name">Google Pixel 7 Pro</p>
+					<div class="product-categories">
+						<div class="product-category">Google</div>
+						<div class="product-category">Smartphone</div>
+					</div>
+					<div class="bottom-bar">
+						<p class="product-price">$899.00</p>
+						<button class="buy">Buy now</button>
+					</div>
+				</div>
+				<div class="product-card google earbuds">
+					<img height="200" src="https://lh3.googleusercontent.com/0MEfw7vnAP_853kmWuBs9xVRUzTKnmxs4NlDSUmQoUhqeVa_u7kVdRKjwe-6_Fh6hdlfWXhxar-47QLMnbqVGzQrl35rcOw4AB5Q=s0">
+					<p class="product-name">Google Pixel Buds A-Series</p>
+					<div class="product-categories">
+						<div class="product-category">Google</div>
+						<div class="product-category">Earbuds</div>
+					</div>
+					<div class="bottom-bar">
+						<p class="product-price">$97.00</p>
+						<button class="buy">Buy now</button>
+					</div>
+				</div>
+				<div class="product-card google smart-watch">
+					<img height="200" src="https://www.fitbit.com/global/content/dam/fitbit/global/pdp/devices/google-pixel-watch/hero-static/charcoal/google-pixel-watch-charcoal-device-3qt-left.png">
+					<p class="product-name">Google Pixel Watch</p>
+					<div class="product-categories">
+						<div class="product-category">Google</div>
+						<div class="product-category">Earbuds</div>
+					</div>
+					<div class="bottom-bar">
+						<p class="product-price">$349.00</p>
+						<button class="buy">Buy now</button>
+					</div>
+				</div>
+				<div class="product-card google laptop">
+					<img height="200" src="https://i.ebayimg.com/images/g/1X4AAOSw-AljpN2a/s-l1600.png">
+					<p class="product-name">Google Pixelbook Go</p>
+					<div class="product-categories">
+						<div class="product-category">Google</div>
+						<div class="product-category">Laptops</div>
+					</div>
+					<div class="bottom-bar">
+						<p class="product-price">$649.00</p>
+						<button class="buy">Buy now</button>
+					</div>
+				</div>
+				<div class="product-card apple earbuds">
+					<img height="200" src="https://cdn.shoplightspeed.com/shops/633289/files/48240715/800x1024x2/apple-airpods-pro-2nd-gen-with-magsafe-charging-ca.jpg">
+					<p class="product-name">Apple AirPods Pro (2nd Gen)</p>
+					<div class="product-categories">
+						<div class="product-category">Apple</div>
+						<div class="product-category">Earbuds</div>
+					</div>
+					<div class="bottom-bar">
+						<p class="product-price">$249.00</p>
+						<button class="buy">Buy now</button>
+					</div>
+				</div>
+				<div class="product-card apple laptop">
+					<img height="200" src="https://i.ebayimg.com/images/g/tLEAAOSwzOJjKIz4/s-l500.png">
+					<p class="product-name">Apple MacBook Pro 2021</p>
+					<div class="product-categories">
+						<div class="product-category">Apple</div>
+						<div class="product-category">Laptop</div>
+					</div>
+					<div class="bottom-bar">
+						<p class="product-price">$599.00</p>
+						<button class="buy">Buy now</button>
+					</div>
+				</div>
+				<div class="product-card samsung smart-watch">
+					<img height="200" src="https://images.samsung.com/is/image/samsung/p6pim/levant/2208/gallery/levant-galaxy-watch5-40mm-sm-r900nzsamea-thumb-533191093?$344_344_PNG$">
+					<p class="product-name">Samsung Watch 4</p>
+					<div class="product-categories">
+						<div class="product-category">Samsung</div>
+						<div class="product-category">Smart watch</div>
+					</div>
+					<div class="bottom-bar">
+						<p class="product-price">$299.00</p>
+						<button class="buy">Buy now</button>
+					</div>
+				</div>
+				<div class="product-card samsung laptop">
+					<img height="200" src="https://o.aolcdn.com/images/dims?image_uri=https%3A%2F%2Fs.yimg.com%2Fos%2Fcreatr-uploaded-images%2F2019-10%2Fb18051a0-fa82-11e9-b199-ca3ce527f53b&thumbnail=640%2C&client=49kdj93ncb8s938hkdo&signature=e818e5f418b7f813fbb444a8746a66c705b6c04b">
+					<p class="product-name">Samsung Galaxy Book Flex</p>
+					<div class="product-categories">
+						<div class="product-category">Samsung</div>
+						<div class="product-category">Laptop</div>
+					</div>
+					<div class="bottom-bar">
+						<p class="product-price">$999.00</p>
+						<button class="buy">Buy now</button>
+					</div>
+				</div>
+				<div class="product-card samsung earbuds">
+					<img height="200" src="https://i5.walmartimages.com/asr/783ff8f7-b725-4710-b52f-5e2fbe66fe3f.a30cccac57e4db72c4fcff2250dcf0de.png">
+					<p class="product-name">Samsung Galaxy Buds Pro</p>
+					<div class="product-categories">
+						<div class="product-category">Samsung</div>
+						<div class="product-category">Earbuds</div>
+					</div>
+					<div class="bottom-bar">
+						<p class="product-price">$139.00</p>
+						<button class="buy">Buy now</button>
+					</div>
+				</div>
+			</div>
+		</main>
 	</div>
 	<div id="page-contact">
-		<main><h1 class="Page-text">Contact page</h1></main>
+		<main>
+			<h1>I'm Tuan Khanh</h1>
+			<h3>Contact me via: </h3>
+			<a href="https://fb.tuank.cf/">
+				<div class="platform" id="facebook">
+					<img width="40" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Facebook_Logo_%282019%29.png/1024px-Facebook_Logo_%282019%29.png">
+					<p class="name">Phạm Tuấn Khanh</p>
+					<p class="link">fb.tuank.cf</p>
+				</div>
+			</a>
+
+			</div>
+		</main>
 	</div>
-	<script src="./lazyload.min.js"></script>
-	<script> new LazyLoad(); </script>
+	<a href="#" id="scroll-top">
+		<button>
+			<span class="material-symbols-rounded icon">
+				expand_less
+			</span>
+		</button>
+	</a>
+	<footer>
+		<div id="upper">
+			<div id="intro">
+				<img id="w-logo" width="60" src="./images/logo.png">
+				<p>I'm Tuan Khanh, this is my Online Shopping Demo website, inspired by <a href="https://m3.material.io/">Material Design v3</a>. Build only using HTML, CSS and <b>no</b> Javascript so some or all of the functionality will not work is expected.</p>
+			</div>
+			<div id="contact">
+				<p class="ft-heading">Contact us</p>
+				<a href="https://fb.tuank.cf">Facebook</a>
+				<a href="https://zalo.tuank.cf">Zalo</a>
+				<a href="mailto:admin@tuank.cf">Email</a>
+			</div>
+		</div>
+		<div id="news-letter">
+			<h2>Stay updated</h2>
+			<p>Subscribe to our newsletter to get our latest news.</p>
+			<form>
+				<input type="text" placeholder="Enter email address">
+				<a href="">Sign up</a>
+			</form>
+		</div>
+	</footer>
 </body>
 </html>
