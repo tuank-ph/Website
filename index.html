@@ -10,7 +10,6 @@
 	<link rel="preload" as="font" href="./fonts/Material-Symbols-Rounded.woff2" crossorigin>
 	<link rel="preload" as="font" href="./fonts/Montserrat-VariableFont_wght.woff2" crossorigin>
 	<link rel="preload" as="font" href="./fonts/BigShouldersDisplay-VariableFont_wght.ttf" crossorigin>
-	<!-- <link rel="preload" as="image" href="https://assets.adidas.com/images/w_400,h_400,f_auto,q_auto,fl_lossy,c_fill,g_auto/fcbd583fdb1044159c9cae61012709dc_9366/camo-series-sweat-pants.jpg" crossorigin> -->
 	<link rel="preload" href="./style.css" as="style"/>
 	<link rel="stylesheet" href="./style.css">
 </head>
@@ -19,7 +18,7 @@
 		<nav id="navigation-bar">
 			<ul>
 				<li>
-					<input type="radio" name="page" id="nav-home" value="nav-home" >
+					<input type="radio" name="page" id="nav-home" value="nav-home" checked>
 					<label for="nav-home">
 						<label for="nav-home" class="icon">
 							<span class="material-symbols-rounded">home</span>
@@ -37,7 +36,7 @@
 					</label>
 				</li>
 				<li>
-					<input type="radio" name="page" id="nav-contact" value="nav-contact" checked>
+					<input type="radio" name="page" id="nav-contact" value="nav-contact">
 					<label for="nav-contact">
 						<label for="nav-contact" class="icon">
 							<span class="material-symbols-rounded">info</span>
@@ -71,7 +70,7 @@
 					<p class="product-name">Sony Xperia 1 IV</p>
 					<p>Starting from</p>
 					<p class="product-price">$999.00</p>
-					<button class="buy">Buy now</button>
+					<button class="buy" onclick="getElementById('pop-ups').style.display = 'flex'">Buy now</button>
 				</div>
 				<div class="product-card">
 					<p class="best-seller">Best seller</p>
@@ -79,7 +78,7 @@
 					<p class="product-name">Sony WF-1000XM4</p>
 					<p>Starting from</p>
 					<p class="product-price">$229.00</p>
-					<button class="buy">Buy now</button>
+					<button class="buy" onclick="getElementById('pop-ups').style.display = 'flex'">Buy now</button>
 				</div>
 				<div class="product-card">
 					<p class="best-seller">Best seller</p>
@@ -87,7 +86,7 @@
 					<p class="product-name">Sony Xperia 5 IV</p>
 					<p>Starting from</p>
 					<p class="product-price">$799.00</p>
-					<button class="buy">Buy now</button>
+					<button class="buy" onclick="getElementById('pop-ups').style.display = 'flex'">Buy now</button>
 				</div>
 				<div class="product-card">
 					<p class="best-seller">Best seller</p>
@@ -95,7 +94,7 @@
 					<p class="product-name">Apple Watch Series 6</p>
 					<p>Starting from</p>
 					<p class="product-price">$799.00</p>
-					<button class="buy">Buy now</button>
+					<button class="buy" onclick="getElementById('pop-ups').style.display = 'flex'">Buy now</button>
 				</div>
 				<div class="product-card">
 					<p class="best-seller">Best seller</p>
@@ -103,7 +102,7 @@
 					<p class="product-name">Samsung Galaxy S23 Ultra</p>
 					<p>Starting from</p>
 					<p class="product-price">$1,199.00</p>
-					<button class="buy">Buy now</button>
+					<button class="buy" onclick="getElementById('pop-ups').style.display = 'flex'">Buy now</button>
 				</div>
 				<div class="product-card">
 					<p class="best-seller">Best seller</p>
@@ -111,7 +110,7 @@
 					<p class="product-name">Iphone 14 Pro Max</p>
 					<p>Starting from</p>
 					<p class="product-price">$1,199.00</p>
-					<button class="buy">Buy now</button>
+					<button class="buy" onclick="getElementById('pop-ups').style.display = 'flex'">Buy now</button>
 				</div>
 			</div>
 			<h2 class="heading">Categories</h2>
@@ -174,7 +173,7 @@
 					</div>
 					<div class="bottom-bar">
 						<p class="product-price">$799.00</p>
-						<button class="buy">Buy now</button>
+						<button class="buy" onclick="getElementById('pop-ups').style.display = 'flex'">Buy now</button>
 					</div>
 				</div>
 				<div class="product-card sony smartphone">
@@ -186,7 +185,7 @@
 					</div>
 					<div class="bottom-bar">
 						<p class="product-price">$999.00</p>
-						<button class="buy">Buy now</button>
+						<button class="buy" onclick="getElementById('pop-ups').style.display = 'flex'">Buy now</button>
 					</div>
 				</div>
 				<div class="product-card sony earbuds">
@@ -198,7 +197,7 @@
 					</div>
 					<div class="bottom-bar">
 						<p class="product-price">$229.00</p>
-						<button class="buy">Buy now</button>
+						<button class="buy" onclick="getElementById('pop-ups').style.display = 'flex'">Buy now</button>
 					</div>
 				</div>
 				<div class="product-card sony smartphone">
@@ -210,7 +209,7 @@
 					</div>
 					<div class="bottom-bar">
 						<p class="product-price">$799.00</p>
-						<button class="buy">Buy now</button>
+						<button class="buy" onclick="getElementById('pop-ups').style.display = 'flex'">Buy now</button>
 					</div>
 				</div>
 				<div class="product-card samsung smartphone">
@@ -222,7 +221,7 @@
 					</div>
 					<div class="bottom-bar">
 						<p class="product-price">$1,199.00</p>
-						<button class="buy">Buy now</button>
+						<button class="buy" onclick="getElementById('pop-ups').style.display = 'flex'">Buy now</button>
 					</div>
 				</div>
 				<div class="product-card apple smartphone">
@@ -234,7 +233,7 @@
 					</div>
 					<div class="bottom-bar">
 						<p class="product-price">$1,199.00</p>
-						<button class="buy">Buy now</button>
+						<button class="buy" onclick="getElementById('pop-ups').style.display = 'flex'">Buy now</button>
 					</div>
 				</div>
 				<div class="product-card google smartphone">
@@ -246,7 +245,7 @@
 					</div>
 					<div class="bottom-bar">
 						<p class="product-price">$899.00</p>
-						<button class="buy">Buy now</button>
+						<button class="buy" onclick="getElementById('pop-ups').style.display = 'flex'">Buy now</button>
 					</div>
 				</div>
 				<div class="product-card google earbuds">
@@ -258,7 +257,7 @@
 					</div>
 					<div class="bottom-bar">
 						<p class="product-price">$97.00</p>
-						<button class="buy">Buy now</button>
+						<button class="buy" onclick="getElementById('pop-ups').style.display = 'flex'">Buy now</button>
 					</div>
 				</div>
 				<div class="product-card google smart-watch">
@@ -270,7 +269,7 @@
 					</div>
 					<div class="bottom-bar">
 						<p class="product-price">$349.00</p>
-						<button class="buy">Buy now</button>
+						<button class="buy" onclick="getElementById('pop-ups').style.display = 'flex'">Buy now</button>
 					</div>
 				</div>
 				<div class="product-card google laptop">
@@ -282,7 +281,7 @@
 					</div>
 					<div class="bottom-bar">
 						<p class="product-price">$649.00</p>
-						<button class="buy">Buy now</button>
+						<button class="buy" onclick="getElementById('pop-ups').style.display = 'flex'">Buy now</button>
 					</div>
 				</div>
 				<div class="product-card apple earbuds">
@@ -294,7 +293,7 @@
 					</div>
 					<div class="bottom-bar">
 						<p class="product-price">$249.00</p>
-						<button class="buy">Buy now</button>
+						<button class="buy" onclick="getElementById('pop-ups').style.display = 'flex'">Buy now</button>
 					</div>
 				</div>
 				<div class="product-card apple laptop">
@@ -306,7 +305,7 @@
 					</div>
 					<div class="bottom-bar">
 						<p class="product-price">$599.00</p>
-						<button class="buy">Buy now</button>
+						<button class="buy" onclick="getElementById('pop-ups').style.display = 'flex'">Buy now</button>
 					</div>
 				</div>
 				<div class="product-card samsung smart-watch">
@@ -318,7 +317,7 @@
 					</div>
 					<div class="bottom-bar">
 						<p class="product-price">$299.00</p>
-						<button class="buy">Buy now</button>
+						<button class="buy" onclick="getElementById('pop-ups').style.display = 'flex'">Buy now</button>
 					</div>
 				</div>
 				<div class="product-card samsung laptop">
@@ -330,7 +329,7 @@
 					</div>
 					<div class="bottom-bar">
 						<p class="product-price">$999.00</p>
-						<button class="buy">Buy now</button>
+						<button class="buy" onclick="getElementById('pop-ups').style.display = 'flex'">Buy now</button>
 					</div>
 				</div>
 				<div class="product-card samsung earbuds">
@@ -342,7 +341,7 @@
 					</div>
 					<div class="bottom-bar">
 						<p class="product-price">$139.00</p>
-						<button class="buy">Buy now</button>
+						<button class="buy" onclick="getElementById('pop-ups').style.display = 'flex'">Buy now</button>
 					</div>
 				</div>
 			</div>
@@ -373,7 +372,6 @@
 					<p class="link">tuankhanh7692@gmail.com</p>
 				</div>
 			</a>
-			</div>
 		</main>
 	</div>
 	<a href="#" id="scroll-top">
@@ -405,5 +403,22 @@
 			</form>
 		</div>
 	</footer>
+	<div id="pop-ups">
+		<div id="dialog">
+
+			<h2>Shipping details</h2>
+			<p>Please fill in your shipment infomations</p>
+			<br>
+			<input type="text" placeholder="Name">
+			<input type="text" placeholder="Mobile number">
+			<input type="text" placeholder="E-mail">
+			<input type="text" placeholder="Address">
+			<div id="bottom-bar">
+				<button id="order">Place order</button>
+				<button id="exit" onclick="getElementById('pop-ups').style.display = 'none';
+				">Cancel</button>
+			</div>
+		</div>
+	</div>
 </body>
 </html>

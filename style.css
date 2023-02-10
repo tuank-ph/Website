@@ -307,7 +307,7 @@ h1, h2, h3, h4, h5, p {
 }
 
 #scroll-top {
-    z-index: 10;
+    z-index: 2;
     position: fixed;
     right: 15px;
     bottom: 15px;
@@ -749,7 +749,7 @@ body:has(#theme-light:not(:checked)) #page-shop .product-card:hover {
 
 #page-contact > main {
     margin: 50px auto;
-    width: clamp(300px, 50vw, 600px);
+    width: clamp(320px, 50vw, 600px);
 }
 
 #page-contact a {
@@ -853,6 +853,90 @@ footer form > a {
 }
 
 
+#pop-ups {
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+    background-color: rgba(0, 0, 0, 0.4);
+    /* opacity: 40%; */
+}
+
+#dialog {
+    display: flex;
+    flex-direction: column;
+    z-index: 4;
+    width: 80%;
+    max-width: 500px;
+    margin: auto;
+    border-radius: 24px;
+    padding: 28px;
+    background-color: var(--elevation-3);
+    gap: 10px;
+    overflow: auto;
+}
+
+input[type=text] {
+    height: 56px;
+    font-size: 18px;
+    border-radius: 5px;
+    padding: 0 16px;
+    background-color: var(--elevation-3);
+    border: 1px solid var(--outline);
+}
+
+input[type=text]:focus {
+    outline: 2px solid var(--primary);
+}
+
+#dialog #bottom-bar {
+    display: inline-block;
+    margin-top: 20px;
+}
+
+#dialog #order { float: right; color: var(--primary);}
+#dialog #exit { float: left; color: var(--on-surface);}
+
+#dialog button {
+    position: relative;
+    font-weight: 700;
+    font-size: medium;
+    border: 0;
+    background-color: var(--elevation-3);
+    padding: 0 20px;
+    cursor: pointer;
+    line-height: 50px;
+    width: fit-content;
+}
+
+#dialog button:hover::after {
+    content: " ";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50vh;
+    background-color: var(--on-secondary-container);
+    opacity: 8%;
+    left: 0;
+    top: 0px;
+}
+
+
+
+/* #dialog::before {
+    content: " ";
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+} */
+
+
+
+
+
+
 
 
 
@@ -872,35 +956,11 @@ footer form > a {
 
 
 /* HOME PAGE - OLD */
-#page-home {
+/* #page-home {
     flex-direction: column;
     background-color: var(--background);
 }
 
-/* #page-home header {
-    aspect-ratio: 4/1;
-    z-index: 0;
-    margin: 5px 2vw;
-    background-image: url(https://lh3.googleusercontent.com/zkVU4g17JXKJuLuV8ZpjW24JLAlJ8-pKe5GaqCKlwv70KaCCLjfNxE1fqBgHbBalNS1kaiyJT7e_MCrqEs_iWDL_0G7rqJK5U9xfSmex_LHPYI-Ox-c=w2400-rj);
-    background-size: cover;
-    border-radius: 24px;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    padding: 5vw;
-    gap: 5px;
-}
-body:has(#theme-light:checked) > #page-home header::after {
-    content: " ";
-    position: absolute;
-    aspect-ratio: 4/1;
-    margin: 0 2.01vw;
-    border-radius: 24px;
-    left: 0;
-    right: 0;
-    padding: 5vw;
-    backdrop-filter: invert(100%) hue-rotate(180deg) !important;
-} */
 #page-home header{
     position: relative;
     aspect-ratio: 4/1;
@@ -941,15 +1001,6 @@ body:has(#theme-light:checked) > #page-home header:before {
     color: var(--on-background)
 }
 
-/* #page-home .card {
-display: flex;
-border-radius: 24px;
-aspect-ratio: 4/1;
-margin: 5px 2vw;
-height: 200px;
-background-color: var(--elevation-3);
-} */
-
 .bor {
     display: flex;
     flex-direction: row;
@@ -988,7 +1039,6 @@ background-color: var(--elevation-3);
     background-color: var(--elevation-1);
     border-radius: 24px;
     padding: calc(5% - 0.2vw) ;
-    /* border: 1px solid #8d9199; */
     -webkit-tap-highlight-color: transparent;
     user-select: none;
 }
@@ -1087,8 +1137,7 @@ background-color: var(--elevation-3);
 #page-home .product-price {
     color: var(--on-background);
     font-weight: 600;
-    /* background-color: greenyellow; */
     text-align: end;
-}
+} */
 
 /* HOME PAGE - OLD */
